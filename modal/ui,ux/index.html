@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modal Project</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .body {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgb(0, 229, 237), rgb(0, 225, 116));
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 20px;
+    /* border-radius: 40px 80px; */
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .text {
+    padding: 40px;
+    text-align: justify;
+    height: 50vh;
+    width: 50vw;
+    background-color: white;
+    margin: 50px auto;
+    border-radius: 60px 60px 5px 60px;
+    padding-top: 40px;
+    z-index:  2;;
+    position: relative;
+  }
+
+  .overlay {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.8;
+  }
+  .esc{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    background: #ccc;
+    transition: all 2s ease 1s;
+  }
+  .esc:hover{
+    transform: translate(20px);
+    /* border-radius: 20px; */
+  }
+
+  .hide {
+    display: none;
+   
+  }
+  .space{
+    word-spacing: 30px;
+    text-align: justify;
+    background-color:beige;
+    /* display: none; */
+    /* transform: translate(30px); */
+  }
+</style>
+
+<body class="body ">
+  <div class="main">
+    <button class="btnn">Click 1</button>
+    <button class="btnn">Click 2</button>
+    <button class="btnn">Click 3</button>
+  </div>
+  <div class="text hide space">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum nisi sunt
+    error iste saepe nemo laudantium aspernatur nihil amet, asperiores fuga,
+    eum incidunt beatae possimus illo eligendi? Est, nostrum. Nulla.
+    <button class="esc">Back to home</button>
+  </div>
+  <div class="overlay hide"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>
